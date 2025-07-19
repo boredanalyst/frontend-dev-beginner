@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Positions</title>
+        <meta charset="utf-8">
+
+        <!-- These are the stuff for loading font families. --> 
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Nova+Round&display=swap" rel="stylesheet">
+
+        <style>
+
+            /* Managing the root element */
+
+            html {
+                background-color:pink;
+                padding:1rem;
+            }
+
+            body {
+                background-color:white;
+                border-radius:20px;
+                padding:3rem;
+                height:100%;
+            }
+            
+            body * {
+                font-family:"Funnel Display";
+            }
+
+
+            /* Headings */
+
+            h1 {
+                text-align:center;
+                font-family:"Nova Round";
+            }
+
+            h1 + p {
+                text-align:center;
+            }
+
+            h3 {
+                font-family:"Nova Round";
+                color:rgb(187, 7, 37);
+            }
+
+            /* Paragraphs */
+
+            p {
+                font-family:"Funnel Display"
+            }
+
+            b {
+                color:maroon;
+            }
+
+            /* Containers */
+
+            section {
+                background-color:rgb(243, 238, 238);
+                padding:0.5rem;
+                border-radius:5px;
+            }
+
+            /* Navigation Bar */
+
+            nav {
+                background-color:hotpink;
+                color:white;
+                padding:0.5rem;
+                border-radius:5px;
+                position:sticky;
+                top:0;
+            }
+            nav article {
+                max-width:16rem;
+                margin:auto;
+                border-radius:5px;
+            }
+
+            nav article span {
+                padding:0.1rem;
+                transition: 
+                    background-color 0.2s ease-in-out,
+                    color 0.2s ease-in-out;
+            }
+            
+            nav article span:hover {
+                background-color:white;
+                color:hotpink;
+                cursor:pointer;
+            }
+
+            /* Positions */ 
+
+            #fixedContainer {
+                padding:0.1rem;
+                position:fixed;
+                bottom:0;
+                left:0;
+                width:100%;
+                text-align:center;
+                border-radius:0;
+                background-color:rgb(106, 245, 106);
+            }
+
+            body section:nth-of-type(2) {
+                color:hotpink;
+                position:relative;
+            }
+
+            body section:nth-of-type(2) p{
+                position:absolute;
+                right:0;
+                top:1rem;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <h1>Positions</h1>
+        <p>You can force the <b>positions</b> of elements on a webpage.</p>
+        <hr>
+        <nav>
+            <article>
+                <span>HOME</span>
+                <span>ABOUT</span>
+                <span>RESOURCES</span>
+            </article>
+        </nav>
+
+        <section id="fixedContainer">
+            <p>This is a <b>fixed</b> container!</p>
+        </section>
+
+        <section id="relativeContainer">
+            <p>This is a <b>absolute</b> paragraph relative to the <b>section</b>.</p>
+
+        </section>
+
+        <p>
+            Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+        </p>
+        <p>    
+            Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+        </p>
+
+    </body>
+</html>
