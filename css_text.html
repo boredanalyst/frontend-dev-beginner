@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Text Formatting</title>
+        <meta charset="utf-8">
+
+        <!-- These are the stuff for loading font families. --> 
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Nova+Round&display=swap" rel="stylesheet">
+
+        <style>
+
+            /* Managing the root element */
+
+            html {
+                background-color:pink;
+                padding:1rem;
+            }
+
+            body {
+                background-color:white;
+                border-radius:20px;
+                padding:3rem;
+                height:100%;
+            }
+            
+            body * {
+                font-family:"Funnel Display";
+            }
+
+
+            /* Headings */
+
+            h1 {
+                text-align:center;
+                font-family:"Nova Round";
+            }
+
+            h3 {
+                font-family:"Nova Round";
+                color:rgb(187, 7, 37);
+            }
+
+            /* Main sections */ 
+
+            section {
+                padding:1rem;
+            }
+
+            b {
+                color:rgb(253, 9, 50);
+            }
+
+            em {
+                color:red;
+            }
+
+            /* Text Alignment */
+
+            #center {
+                text-align:center;
+            }
+
+            #right {
+                text-align:right;
+            }
+
+            /* Text Decoration */
+
+            #overline {
+                text-decoration-line:overline;
+            }
+
+            #underline {
+                text-decoration-line:underline;
+            }
+
+            #linethrough {
+                text-decoration-line: line-through;
+            }
+
+            /* Text Transformation */
+
+            #upper {
+                text-transform:uppercase;
+            }
+
+            #lower {
+                text-transform:lowercase;
+            }
+
+            /* Text Spacing */
+
+            #indent {
+                text-indent:50px;
+            }
+
+            #letterspacing {
+                letter-spacing:10px;
+            }
+
+            #wordspacing {
+                word-spacing:20px;
+            }
+
+            #textshadow {
+                text-shadow:3px 3px rgb(204, 204, 4);
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <h1>Text Formatting</h1>
+        <hr>
+        <section>
+            <h3>Font Colors</h3>
+            <p>You can change certain text's font colors like <b>this</b> or <em>that</em>. </p>
+        </section>
+
+        <section>
+            <h3>Text Alignment</h3>
+            <p><b>Text Alignment</b> refers to the where the text is situated with respect to the <b>x-axis</b> or <b>y-axis</b>.</p>
+            <p>This text is <b>left-aligned</b></p>
+            <p id="center">This text is <b>center-aligned</b></p>
+            <p id="right">This text is <b>right-aligned</b></p>
+            <p>There is another attribute called <b>vertical align</b> that controls the elements according to the <b>y-axis</b></p>
+        </section>
+
+        <section>
+            <h3>Text Decoration - Line</h3>
+            <p>Some texts may have what is called <b>text decorations</b> that are just aesthetic modifications of the usual texts.</p>
+            <p>Some examples are decorations involving lines. The text has an <b id="overline">overline</b> while this text has an <b id="underline">underline</b>.</p>
+            <p>Some texts may even have <b id="linethrough">lines running through them</b>.</p>
+        </section>
+
+        <section>
+            <h3>Text Transformation</h3>
+            <p>You can also modify pieces of texts depending on styles.</p>
+            <p>This text can be written in <b id="upper">uppercase</b> while this one can be written in purely <b id="lower">LOWERCASE</b></p>
+        </section>
+
+        <section>
+            <h3>Text Spacing</h3>
+            <p>There are a lot of things you can do to modify spacing aspects of texts such as <b>text spacing</b> or <b>letter spacing</b></p>
+            <p id="indent">This text is indented to the right by <b>50 px</b></p>
+            <p>You can also modify the <b id="letterspacing">letter spacing</b> of words.</p>
+            <p id="wordspacing">You can even modify the <b>word spacing</b> of entire pieces of texts!</p>
+            <p>Another interesting thing to play with is <b id="textshadow">text shadow</b></p>
+        </section>
+
+    </body>
+</html>
