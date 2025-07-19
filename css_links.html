@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hyperlinks</title>
+        <meta charset="utf-8">
+
+        <!-- These are the stuff for loading font families. --> 
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Nova+Round&display=swap" rel="stylesheet">
+
+        <style>
+
+            /* Managing the root element */
+
+            html {
+                background-color:pink;
+                padding:1rem;
+            }
+
+            body {
+                background-color:white;
+                border-radius:20px;
+                padding:3rem;
+                height:100%;
+            }
+            
+            body * {
+                font-family:"Funnel Display";
+            }
+
+
+            /* Headings */
+
+            h1 {
+                text-align:center;
+                font-family:"Nova Round";
+            }
+
+            h1 + p {
+                text-align:center;
+            }
+
+            h3 {
+                font-family:"Nova Round";
+                color:rgb(187, 7, 37);
+            }
+
+            /* Paragraphs */
+
+            p {
+                font-family:"Funnel Display"
+            }
+
+            b {
+                color:maroon;
+            }
+
+            /* Containers */
+
+            section {
+                background-color:rgb(243, 238, 238);
+                padding:0.5rem;
+                border-radius:5px;
+            }
+
+            /* Hyperlinks */
+
+            a {
+                color:hotpink;
+            }
+
+            a:hover {
+                background-color:hotpink;
+                color:black;
+            }
+
+            a:visited {
+                color:black;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <h1>Hyperlinks and Intralinks</h1>
+        <p>Here are some formatting to do for some <b>hyperlinks</b> that you use.</p>
+        <hr>
+        <section>
+            <h3>Hyperlinks</h3>
+            <p>Here are some hyperlinks. Think of these like <b>sample navigation or table of contents</b>.</p>
+            <h3><b>Table of Content</b></h3>
+            <ul>
+                <a href="#5"><li>Google</li></a>
+                <a href="#6"><li>Facebook</li></a>
+                <a href="#8"><li>Pinterest</li></a>
+            </ul>
+        </section>
+      
+    </body>
+</html>
