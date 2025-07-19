@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data Organization</title>
+        <meta charset="utf-8">
+
+        <!-- These are the stuff for loading font families. --> 
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Nova+Round&display=swap" rel="stylesheet">
+
+        <style>
+
+            /* Managing the root element */
+
+            html {
+                background-color:pink;
+                padding:1rem;
+            }
+
+            body {
+                background-color:white;
+                border-radius:20px;
+                padding:3rem;
+                height:100%;
+            }
+            
+            body * {
+                font-family:"Funnel Display";
+            }
+
+
+            /* Headings */
+
+            h1 {
+                text-align:center;
+                font-family:"Nova Round";
+            }
+
+            h1 + p {
+                text-align:center;
+            }
+
+            h3 {
+                font-family:"Nova Round";
+                color:rgb(187, 7, 37);
+            }
+
+            /* Paragraphs */
+
+            p {
+                font-family:"Funnel Display"
+            }
+
+            b {
+                color:maroon;
+            }
+
+            /* Containers */
+
+            section {
+                background-color:rgb(243, 238, 238);
+                padding:0.5rem;
+                border-radius:5px;
+            }
+
+            /* Ordered List */
+
+            ol {
+                list-style-type:lower-alpha;
+            }
+
+            section ol:nth-of-type(2) {
+                list-style-type:lower-greek;
+            }
+
+            /* Tables */
+
+            table {
+                width:100;
+                border-collapse:collapse;
+            }
+
+            thead {
+                background-color:hotpink;
+                color:white;
+            }
+            
+            th {
+                text-align:center;
+            }
+            
+            td, th {
+                padding:0.5rem;
+                border: 1px solid hotpink;
+            
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+        <h1>Data Organization</h1>
+        <p>You can organize your data in numerous forms. This page formats data that are presented in <b>lists</b> and <b>tables</b></p>
+        <hr>
+        <section>
+            <h3>List</h3>
+            <p>You can change the list markers on both <b>ordered</b> and <b>unordered lists.</b></p>
+            <hr>
+            <h3>Shopping List</h3>
+            <p>This list uses <b>lowercase letters</b> for markers.</p>
+            <ol>
+                <li>Apple</li>
+                <li>Milk</li>
+                <li>Beef</li>
+            </ol>
+            <hr>
+            <h3>Menu</h3>
+            <p>This is an ordered list that uses <b>Greek alphabet letters</b>.</p>
+            <ol>
+                <li>Beef Ravioli</li>
+                <li>Chicken Soup</li>
+                <li>Braised Chicken</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Tables</h3>
+            <p>Anything we need to know to design tables!</p>
+            <table>
+                <thead>
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                </tr>
+                </thead>
+                <tr>
+                    <td>Item 1</td>
+                    <td>Item 2</td>
+                </tr>
+            </table>
+        </section>
+      
+    </body>
+</html>
