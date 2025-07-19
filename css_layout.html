@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Layout</title>
+        <meta charset="utf-8">
+
+        <!-- These are the stuff for loading font families. --> 
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Nova+Round&display=swap" rel="stylesheet">
+
+        <style>
+
+            /* Managing the root element */
+
+            html {
+                background-color:pink;
+                padding:1rem;
+            }
+
+            body {
+                background-color:white;
+                border-radius:20px;
+                padding:3rem;
+                height:100%;
+            }
+            
+            body * {
+                font-family:"Funnel Display";
+            }
+
+
+            /* Headings */
+
+            h1 {
+                text-align:center;
+                font-family:"Nova Round";
+            }
+
+            h1 + p {
+                text-align:center;
+            }
+
+            h3 {
+                font-family:"Nova Round";
+                color:rgb(187, 7, 37);
+            }
+
+            /* Paragraphs */
+
+            p {
+                font-family:"Funnel Display"
+            }
+
+            b {
+                color:maroon;
+            }
+
+            /* Containers */
+
+            section {
+                background-color:rgb(243, 238, 238);
+                padding:0.5rem;
+                border-radius:5px;
+            }
+
+            section:first-of-type p {
+                max-width:40rem;
+                max-height:5rem;
+                overflow:hidden;
+            }
+
+             section:nth-of-type(2) p {
+                max-width:40rem;
+                max-height:5rem;
+                overflow:scroll;
+            }
+
+            section:nth-of-type(3) p{
+                background-color:yellow;
+                max-width:40rem;
+                max-height:5rem;
+                overflow:visible;
+            }
+
+
+            /* z-index */
+
+            section:nth-of-type(4) {
+                background-color:pink;
+                z-index:1;
+                opacity:50%;
+                position:absolute;
+                top:0;
+            }
+
+            section:nth-of-type(4) h1 {
+               font-size:20rem;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <h1>Layout</h1>
+        <p>You can <b>arrange</b> elements based on various elements.</p>
+        <hr>
+
+        <h3>Clipped/Hidden Texts</h3>
+        <section>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus similique magni esse quibusdam ad vero laudantium amet, repellendus velit qui fugit atque adipisci nam eum eligendi nesciunt voluptas ullam animi.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure necessitatibus facilis quisquam officia tempore dolores ullam veniam fugiat, illo modi quaerat iusto debitis deleniti omnis nulla ab fugit rerum dignissimos!</p>
+        </section>
+
+        <h3>Scrollable Texts</h3>
+        <section>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus similique magni esse quibusdam ad vero laudantium amet, repellendus velit qui fugit atque adipisci nam eum eligendi nesciunt voluptas ullam animi.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure necessitatibus facilis quisquam officia tempore dolores ullam veniam fugiat, illo modi quaerat iusto debitis deleniti omnis nulla ab fugit rerum dignissimos!</p>
+        </section>
+
+        <h3>Scrollable Texts</h3>
+        <section>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus similique magni esse quibusdam ad vero laudantium amet, repellendus velit qui fugit atque adipisci nam eum eligendi nesciunt voluptas ullam animi.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure necessitatibus facilis quisquam officia tempore dolores ullam veniam fugiat, illo modi quaerat iusto debitis deleniti omnis nulla ab fugit rerum dignissimos!</p>
+        </section>
+
+        <section>
+            <h1>HELLO THERE!</h1>
+        </section>
+
+    </body>
+</html>
