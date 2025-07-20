@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Combinators, Descendants, and Ascendants</title>
+
+        <!-- FONT STYLES-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Nova+Round&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <style>
+
+            html {
+                padding:0.1rem;
+                background-color:hotpink;
+            }
+
+            body {
+                background-color:white;
+                border-radius:10px;
+            }
+
+
+            body * {
+                font-family:"Open Sans";
+                transition: all 0.2s ease-in-out;
+
+            }
+
+            h1, h2, h3 {
+                font-family:"Intel One Mono";
+            }
+
+            h1 {
+                text-align:center;
+                color:hotpink;
+                text-transform:uppercase;
+            }
+
+            /* NAVIGATION BAR */
+
+            nav {
+                background-color:rgb(221, 221, 221);
+                margin:auto;
+            }
+
+            nav ul {
+                display:flex;
+                flex-direction:row;
+                margin:auto;
+            }
+
+            li {
+                fleX:1;
+                list-style:none;
+                padding:0.5rem;
+                text-align:center;
+            }
+
+            li:hover {
+                background-color:hotpink;
+                color:white;
+                cursor:pointer;
+            }
+
+            nav ul li:last-of-type {
+                background-color:hotpink;
+                color:white;
+                text-transform:underline;
+                font-weight:bold;
+                border-radius:5px 5px 0 0;
+            }
+
+            nav ul li:last-of-type:hover {
+                background-color:white;
+                color:hotpink;
+            }
+
+            /* BODY */
+            
+            section {
+                margin:1rem;
+                padding:0.5rem;
+            }
+
+            section h2 {
+                color:hotpink;
+            }
+
+            b {
+                color:hotpink;
+            }
+
+            section#forDescendant p {
+                background-color:rgb(179, 253, 172);
+                padding:0.5rem;
+            }
+
+            /* Children Combinators */
+
+            section#forChildren {
+                background-color:#e6e3e3;
+            }
+
+            section#forChildren > p {
+                background-color:hotpink;
+                color:white;
+                padding:0.5rem;
+            }
+
+            /* Sibling Combinator */
+
+            section#forSibling p + p {
+                background-color:rgb(38, 56, 10);
+                color:white;
+                padding:0.5rem;
+            }
+
+            /* ALL Sibling Combinator */
+
+            section#forAllSibling p ~ p {
+                background-color:rgb(50, 63, 50);
+                color:white;
+                padding:0.5rem;
+            }
+
+
+        </style>
+    
+    </head>
+
+    <body>
+        <main>
+            <h1>Combinators</h1>
+
+            <nav>
+                <ul>
+                    <li>HOME</li>
+                    <li>BLOG</li>
+                    <li>ABOUT US</li>
+                    <li>DONATE</li>
+                </ul>
+            </nav>
+
+            <section>
+                <h2>Descendant Combinators</h2>
+                <hr>
+                <p>Descendant combinators allow you to modify elements inside another elements. This is <b>useful</b> for elements that are inside containers.</p>
+                <p><b>Note</b> that descendant combinators affect <b>all</b> elements inside a container no matter how deep they are in the heirarchy.</p>
+                <section id="forDescendant">
+                    <p>This is a <b>paragraph</b> element inside a section element.</p>
+                    <p>The stylings only affect this paragraph element <b>inside</b> this section.</p>
+                    <p>All the paragpraph elements outside it are not affected.</p>
+                </section>
+            </section>
+
+            <section>
+                <h2>Children Combinators</h2>
+                <hr>
+                <p>Children Combinators are like descendant combinators except children combinators only affect the <b>direct</b> children of a container.</p>
+                <p>It does not affect all children of a container's children.</p>
+                <section id="forChildren">
+                    <p>This is a paragraph in level 1.</p>
+                    <p>Only these paragraphs are affected by the style.</p>
+                    <p>These are paragraphs </p>
+                    <section>
+                        <p>This is a paragraph in level 2.</p>
+                        <p>These are paragraphs are in that are not direct children of the initial section.</p>
+                    </section>
+                </section>
+            </section>
+
+            <section>
+                <h2>Next Sibling Combinators</h2>
+                <hr>
+                <p>The <b>next sibling</b> combinators will affect the <b>immediate</b> sibling of an element.</p>
+                <section id="forSibling">
+                    <p>This is the reference point and the style was applied to all paragraphs that succeed another paragraph.</p>
+                    <p>This is the <b>first</b> sibling.</p>
+                    <hr>
+                    <p>This is the <b>second</b> sibling. It is not affected because there is a horizontal rule element between this paragraph and the paragraph before it.</p>
+                </section>
+            </section>
+
+            <section>
+                <h2>All Sibling Combinators</h2>
+                <hr>
+                <p>The <b>all sibling</b> combinators will affect the <b>all</b> siblings of an element.</p>
+                <p>This means all siblings, regardless of their separation from the reference element, will get affected.</p>
+                <section id="forAllSibling">
+                    <p>This is the reference point and the style was applied to all paragraphs that succeed another paragraph.</p>
+                    <hr>
+                    <p>This is the <b>first</b> sibling.</p>
+                    <hr>
+                    <p>This is the <b>second</b> sibling.</p>
+                    <hr>
+                    <p>This is the <b>last</b> sibling. All these paragraphs are affected regardless of the horizontal rules between them.</p>
+                </section>
+            </section>
+
+
+        </main>
+    </body>
+
+
+</html>
