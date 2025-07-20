@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Pseudoclasses</title>
+
+        <!-- FONT STYLES-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Nova+Round&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <style>
+
+            html {
+                padding:0.1rem;
+                background-color:hotpink;
+            }
+
+            body {
+                background-color:white;
+                border-radius:10px;
+            }
+
+
+            body * {
+                font-family:"Open Sans";
+                transition: all 0.2s ease-in-out;
+                padding:0.5rem;
+
+            }
+
+            h1, h2, h3 {
+                font-family:"Intel One Mono";
+            }
+
+            h2 {
+                padding:1rem;
+                text-align:center;
+                text-transform:uppercase;
+            }
+
+            h1 {
+                text-align:center;
+                color:hotpink;
+                text-transform:uppercase;
+            }
+
+            /* SECTIONS AND SPANS */
+
+            main > section > section {
+                
+                padding:0.5rem;
+                display:flex;
+                flex-direction:row;
+                margin:auto;
+            }
+
+            main > section > section > span {
+                flex:1;
+                text-align:center;
+                margin:0.8rem;
+                padding:0.10rem;
+            }
+
+
+            main b:hover {
+                background-color:green;
+                color:white;
+                cursor:pointer;
+            }
+
+
+                main > section > section > span:first-of-type {
+                    background-color:rgb(179, 18, 179);
+                    color:white;
+                }
+
+                main > section > section > span:nth-of-type(2) {
+                    background-color:rgb(104, 143, 15);
+                    color:white;
+                }
+
+                main > section > section > span:nth-of-type(3) {
+                    background-color:rgba(13, 93, 99, 0.993);
+                    color:white;
+                }
+
+            main > section > section span:hover {
+                background-color:blue;
+                cursor:pointer;
+                transform:translateY(-0.5rem);
+                box-shadow:0.1rem 0.3rem gray;
+            }
+
+            /* TABLES */
+
+            table {
+                border-collapse:collapse;
+                width:50rem;
+                max-width:50rem;
+            }
+
+            table, td, th {
+                border:hotpink 0.1rem solid;
+            }
+
+            th {
+                text-align:center;
+            }
+
+            table tr:first-child {
+                background-color:hotpink;
+                color:white;
+            }
+
+            table td:first-child {
+                background-color:hotpink;
+                color:white;
+                font-weight:bold;
+            }
+
+
+        </style>
+    
+    </head>
+
+    <body>
+        <header>
+            <h1>Pseudoclasses</h1>
+            <hr>
+        </header>
+        <main>
+            <section>
+                <h2>Choices</h2>
+                <p>The follow containers have <b>hover</b> pseudoclasses applied to them. They execute behaviors when a mouse is hovered over them.</p>
+                <section>
+                    <span>
+                        <h3>Option A</h3>
+                    </span>
+                    <span>
+                        <h3>Option B</h3>
+                    </span>
+                    <span>
+                        <h3>Option C</h3>
+                    </span>
+                </section>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>FIRST CHILD</h2>
+                <p>The <b>:first-child</b> pseudo-class only affects the first child of a container.</p>
+                <p>The table below only has the first cell of each row highlighted.</p>
+                <hr>
+                <table>
+                    <tr>
+                        <th>Category</th>
+                        <th>Item</th>
+                        <th>Numbers</th>
+                    </tr>
+                    <tr>
+                        <td>Fruits</td>
+                        <td>Banana</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Fruits</td>
+                        <td>Apples</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Sweets</td>
+                        <td>Chocolate Bars</td>
+                        <td>5</td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+    </body>
+
+
+</html>
