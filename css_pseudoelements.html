@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Pseudoelements</title>
+
+        <!-- FONT STYLES-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Nova+Round&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <style>
+
+            /* DEFAULT LINES */
+
+            html {
+                padding:0.1rem;
+                background-color:hotpink;
+            }
+
+            body {
+                background-color:white;
+                border-radius:10px;
+            }
+
+
+            body * {
+                font-family:"Open Sans";
+                transition: all 0.2s ease-in-out;
+                padding:0.5rem;
+
+            }
+
+            h1, h2, h3 {
+                font-family:"Intel One Mono";
+            }
+
+            h2 {
+                padding:1rem;
+                text-align:center;
+                text-transform:uppercase;
+            }
+
+            h1 {
+                text-align:center;
+                color:hotpink;
+                text-transform:uppercase;
+            }
+
+            h1:hover {
+                background-color:green;
+                color:white;
+                transform:translateY(-0.2rem);
+            }
+
+            b {
+                letter-spacing:0.1rem;
+            }
+
+            b:hover {
+                background-color:green;
+                color:white;
+            }
+
+            section {
+                margin:1rem;
+                padding:0.5rem;
+            }
+
+            ul {
+                margin:1rem;
+            }
+
+            /* SPECIFIC ITEMS */
+
+            main section:first-of-type::first-letter {
+                color:white;
+                font-weight:bold;
+                font-size:2rem;
+                padding-left:0.5rem;
+                padding-right:0.5rem;
+                background-color:hotpink;
+            }
+
+            main section:nth-of-type(2) p:nth-of-type(2)::first-line {
+                color:white;
+                font-weight:bold;
+                background-color:hotpink;
+            }
+
+            main section:nth-of-type(3) li::marker {
+                color:hotpink;
+                font-size:1.2rem;
+            }
+
+            ::selection {
+                background-color:hotpink;
+                color:white;
+            }
+
+        </style>
+    
+    </head>
+
+    <body>
+        <header>
+            <h1>Pseudoelements</h1>
+            <hr>
+        </header>
+        <main>
+            <h2>First Letter</h2>
+            <hr>
+            <p>Pseudoelements allow you to modify specific parts of existing elements.</p>
+            <p>One of these pseudoelements is called <b>::first-letter</b> which modifies the first letter of an element.</p>
+            <section>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laborum consectetur error? Deserunt neque consectetur, voluptatibus totam assumenda qui, suscipit optio eaque modi aspernatur magnam laboriosam possimus consequuntur omnis blanditiis.</p>
+            </section>
+            <section>
+                <h2>First Line</h2>
+                <p>Another pseudoelement is the <b>::first-line</b>, and it modifies the first line of an element instead of just the first letter.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quos laboriosam nulla sapiente vero debitis neque voluptas aliquid fugit, architecto adipisci saepe temporibus quod magni, numquam commodi repellat, blanditiis est!</p>
+            </section>
+
+            <section>
+                <h2>Markers</h2>
+                <p>Lists have markers on them. To modify these markers, we can ues the <b>::markers</b> pseudoelement.</p>
+                <ul>
+                    <h3>Shopping List</h3>
+                    <li>apples</li>
+                    <li>bananas</li>
+                    <li>oranges</li>
+                </ul>
+            </section>
+        </main>
+    </body>
+
+
+</html>
