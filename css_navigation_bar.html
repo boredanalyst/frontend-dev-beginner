@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Navigation Bars</title>
+
+        <!-- FONT STYLES-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Nova+Round&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <style>
+
+            /* DEFAULT LINES */
+
+            html {
+                padding:0.1rem;
+                background-color:hotpink;
+            }
+
+            body {
+                background-color:white;
+                border-radius:10px;
+            }
+
+
+            body * {
+                font-family:"Open Sans";
+                transition: all 0.2s ease-in-out;
+                padding:0.5rem;
+
+            }
+
+            h1, h2, h3 {
+                font-family:"Intel One Mono";
+            }
+
+            h2 {
+                padding:1rem;
+                text-align:center;
+                text-transform:uppercase;
+            }
+
+            h1 {
+                text-align:center;
+                color:hotpink;
+                text-transform:uppercase;
+            }
+
+            h1:hover {
+                background-color:green;
+                color:white;
+                transform:translateY(-0.2rem);
+            }
+
+            b {
+                letter-spacing:0.1rem;
+            }
+
+            b:hover {
+                background-color:green;
+                color:white;
+            }
+
+            section {
+                margin:1rem;
+                padding:0.5rem;
+            }
+
+            ul {
+                margin:1rem;
+            }
+
+            /* SPECIFIC ITEMS */
+
+               /* Vertical Bars */
+
+               section:first-of-type ul:first-of-type {
+                width:50%;
+               }
+
+               section:first-of-type ul:first-of-type li {
+                    list-style-type:none;
+                    color:hotpink;
+               }
+
+               section:first-of-type ul:first-of-type li:hover {
+                    background-color:hotpink;
+                    color:white;
+               }
+
+               section:first-of-type ul:first-of-type li:hover a {
+                    color:white;
+               }
+
+               section:first-of-type ul:first-of-type li:last-child {
+                    background-color:green;
+               }
+
+               section:first-of-type ul:first-of-type li:last-child a {
+                    color:white;
+                    font-weight:bold;
+               }
+
+               /* Horizontal Bars */
+
+               section:nth-of-type(2) ul {
+                list-style-type:none;
+                display:flex;
+                width:100%;
+               }
+
+               section:nth-of-type(2) ul li {
+                flex:1;
+                text-align:center;
+                margin:0.2rem;
+               }
+
+               section:nth-of-type(2) ul li:hover {
+                background-color:hotpink;
+                box-shadow:0.3rem 0.3rem gray;
+                transform:translateY(-0.2rem);
+               }
+
+               section:nth-of-type(2) ul li a {
+                text-decoration-line:none;
+               }
+
+               section:nth-of-type(2) ul li:hover a {
+                color:white;
+               }
+
+
+
+               
+
+
+        </style>
+    
+    </head>
+
+    <body>
+        <header>
+            <h1>Navigation Bars</h1>
+            <hr>
+        </header>
+        <main>
+           <p>You can design different variations of navigation bars.</p>
+        
+           <section>
+            <h2>Vertical Bars</h2>
+            <p>The following shows a navigation bar arranged vertically</p>
+            <hr>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Donate</a></li>
+            </ul>
+           </section>
+
+           <section>
+            <h2>Horizontal Bars</h2>
+            <p>The following shows a navigation bar arranged horizontally.</p>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Donate</a></li>
+                </ul>
+           </section>
+
+        </main>
+    </body>
+
+
+</html>
