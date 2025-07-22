@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Counters</title>
+
+        <!-- FONT STYLES-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Nova+Round&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <style>
+
+            /* DEFAULT LINES */
+
+            html {
+                padding:0.1rem;
+                background-color:hotpink;
+            }
+
+            body {
+                background-color:white;
+                border-radius:10px;
+            }
+
+
+            body * {
+                font-family:"Open Sans";
+                transition: all 0.2s ease-in-out;
+                padding:0.5rem;
+
+            }
+
+            h1, h2, h3 {
+                font-family:"Intel One Mono";
+            }
+
+            h2 {
+                padding:1rem;
+                text-align:center;
+                text-transform:uppercase;
+            }
+
+            h1 {
+                text-align:center;
+                color:hotpink;
+                text-transform:uppercase;
+            }
+
+            h1:hover {
+                background-color:green;
+                color:white;
+                transform:translateY(-0.2rem);
+            }
+
+            b {
+                letter-spacing:0.1rem;
+            }
+
+            b:hover {
+                background-color:green;
+                color:white;
+            }
+
+            section {
+                margin:1rem;
+                padding:0.5rem;
+            }
+
+            ul {
+                margin:1rem;
+            }
+
+            /* SPECIFIC ITEMS */
+
+                /* Counters */
+                body {
+                    counter-reset:footnotes
+                }
+
+                b[class*="people"] {
+                    counter-increment: footnotes;
+                }
+
+                b[class*="people"]::after {
+                    content:counter(footnotes);
+                    vertical-align:super;
+                    font-size:0.6rem;
+                    text-decoration:underline;
+                }
+
+                /* Table */
+
+                table {
+                    width:100%;
+                    border-collapse:collapse;
+                    counter-reset: oop-counter;
+                }
+
+                table * {
+                    border:solid 1px hotpink;
+                }
+
+                tr:first-of-type {
+                    background-color:hotpink;
+                    color:white;
+                }
+
+                tr:not(tr:first-of-type) {
+                    counter-increment:oop-counter;
+                }
+
+                tr:not(tr:first-of-type):hover {
+                    counter-increment:oop-counter;
+                }
+
+
+
+                td[class*="redacted"] {
+                    color:white;
+                    font-weight:bold;
+                    background-color:red;
+                }
+
+
+
+                tr td:first-of-type::before {
+                    font-size:0.8rem;
+                    content: counter(oop-counter) " ";
+                    color:hotpink;
+                }
+
+        </style>
+    
+    </head>
+
+    <body>
+        <header>
+            <h1>Counters</h1>
+            <hr>
+            <p>Counters are variables internally tracked by CSS. The values of the counter can be displayed using <b>::before</b> or <b>::after</b> pseudoelements.</p>
+            <section>
+                <h2>Objects of Power (From Control the Video Game)</h2>
+                <p><b class="bold-item-high">Objects of Power (OoPs) </b> are a type of <b class="bold-item-high">Altered Item</b> connected to the <b class="bold-place-high">Astral Plane</b>, although <b class="bold-people-high">Emily Pope</b> believes they may be connected to other paranatural forces. Unlike ordinary <b class="bold-item-high">Altered Items</b>, many OoPs can be bound by <b class="bold-people-high">parautilitarians</b>, allowing them to wield their abilities. Objects of Power are of great importance to the <b class="bold-place-high">Federal Bureau of Control</b>, and many are contained within the <b class="bold-place-item">Oldest House</b>.</p>
+            </section>
+
+            <section>
+                <h2>List of Objects of Power</h2>
+                <table>
+                    <tr class="row-header">
+                        <th>Object</th>
+                        <th>Location</th>
+                        <th>Powers/Abilities</th>
+                    </tr>
+                    <tr>
+                        <td>Service Weapon</td>
+                        <td>Director's Office</td>
+                        <td>Weapon</td>
+                    </tr>
+                    <tr>
+                        <td>Hotline</td>
+                        <td>Hotline Chamber, Executive Sector</td>
+                        <td>Communication with The Board</td>
+                    </tr>
+                    <tr>
+                        <td>Floppy Disk</td>
+                        <td class="loc-redacted">[REDACTED]</td>
+                        <td>Launching objects</td>
+                    </tr>
+                    <tr>
+                        <td>Benicoff TV</td>
+                        <td>Panopticon, Containment Sector</td>
+                        <td>Levitation</td>
+                    </tr>
+                    <tr>
+                        <td>Songmaster Jukebox</td>
+                        <td>Executive Sector</td>
+                        <td>Teleportation to Quarry</td>
+                    </tr>
+                    <tr>
+                        <td>Ashtray and Cigarette</td>
+                        <td class="loc-redacted">[REDACTED]</td>
+                        <td>Maze construction</td>
+                    </tr>
+                    <tr>
+                        <td>Slide Projector</td>
+                        <td>Dimensional Research Sector</td>
+                        <td>Interdimensional travel</td>
+                    </tr>
+                    <tr>
+                        <td>Merry-Go-Round Horse</td>
+                        <td class="loc-redacted">[REDACTED]</td>
+                        <td>High-speed movement</td>
+                    </tr>
+                    <tr>
+                        <td>X-Ray Lightbox</td>
+                        <td>Parasychology Department, Research Sector</td>
+                        <td>Hypnosis</td>
+                    </tr>
+                    <tr>
+                        <td>Home Safe</td>
+                        <td class="loc-redacted">[REDACTED]</td>
+                        <td>Shield creation</td>
+                    </tr>
+                </table>
+            </section>
+
+        </header>
+        <main>
+            
+
+        </main>
+    </body>
+
+
+</html>

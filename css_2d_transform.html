@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>2D Transforms</title>
+
+        <!-- FONT STYLES-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Nova+Round&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <style>
+
+            /* DEFAULT LINES */
+
+            html {
+                padding:0.1rem;
+                background-color:hotpink;
+            }
+
+            body {
+                background-color:white;
+                border-radius:10px;
+            }
+
+
+            body * {
+                font-family:"Open Sans";
+                transition: all 0.2s ease-in-out;
+                padding:0.5rem;
+
+            }
+
+            h1, h2, h3 {
+                font-family:"Intel One Mono";
+            }
+
+            h2 {
+                padding:1rem;
+                text-align:center;
+                text-transform:uppercase;
+            }
+
+            h1 {
+                text-align:center;
+                color:hotpink;
+                text-transform:uppercase;
+            }
+
+            h1:hover {
+                background-color:green;
+                color:white;
+                transform:translateY(-0.2rem);
+            }
+
+            b {
+                letter-spacing:0.1rem;
+            }
+
+            b:hover {
+                background-color:green;
+                color:white;
+            }
+
+            section {
+                margin:1rem;
+                padding:0.5rem;
+            }
+
+            ul {
+                margin:1rem;
+            }
+
+            /* SPECIFIC ITEMS */
+
+               /* ROTATION */
+
+               section:first-of-type article {
+                padding:1rem;
+                display:flex;
+               }
+
+               section:first-of-type article span {
+                flex:1;
+                text-align:center;
+                background-color:hotpink;
+                margin:10px;
+                padding:20px;
+                color:white;
+                transform: all 0.1s ease-in;
+               }
+
+               section:first-of-type article span:hover {
+                transform:rotate(-5deg);
+                box-shadow:-10px 10px yellow;
+               }
+
+               /* TRANSLATION */
+
+               section:nth-of-type(2) article {
+                display:flex;
+               }
+
+               section:nth-of-type(2) article span {
+                flex:1;
+                text-align:center;
+                background-color:rgb(124, 124, 235);
+                color:white;
+                margin:10px;
+                padding:20px;
+               }
+
+                section:nth-of-type(2) article span:first-of-type:hover {
+                    transform:translateX(10px);
+                    background-color:hotpink;
+                } 
+
+                section:nth-of-type(2) article span:nth-of-type(2):hover {
+                    transform:translateY(-10px);
+                    background-color:hotpink;
+                } 
+
+                section:nth-of-type(3) article {
+                    display:flex;
+                }
+
+                section:nth-of-type(3) article span {
+                flex:1;
+                text-align:center;
+                background-color:rgb(124, 124, 235);
+                color:white;
+                margin:10px;
+                padding:20px;
+               }
+
+               section:nth-of-type(3) article span:nth-of-type(1):hover {
+                transform:scale(1.1);
+                background-color:hotpink;
+                box-shadow:0px 10px 10px gray;
+               }
+
+               section:nth-of-type(3) article span:nth-of-type(2):hover {
+                transform:scale(0.9);
+                background-color:hotpink;
+                box-shadow:0px 10px 10px gray;
+               }
+
+
+
+        </style>
+    
+    </head>
+
+    <body>
+        <header>
+            <h1>2D Transforms</h1>
+            <hr>
+            <p><b>2D Transform</b> stylings allow users to transform elements along the x and y axes.</p>
+        </header>
+
+        <section>
+            <h2>Rotation</h2>
+            <article>
+                <span>Option 1</span>
+                <span>Option 2</span>
+                <span>Option 3</span>
+            </article>
+        </section>
+
+        <section> 
+            <h2>Translation</h2>
+            <article>
+                <span>Move right</span>
+                <span>Move up</span>
+            </article>
+        </section>
+
+        <section>
+            <h2>Scaling</h2>
+            <article>
+                <span>Grow</span>
+                <span>Shrink</span>
+            </article>
+        </section>
+
+        <main>
+            
+
+        </main>
+    </body>
+
+
+</html>
