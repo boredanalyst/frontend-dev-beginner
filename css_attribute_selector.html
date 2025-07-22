@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Attribute Selector</title>
+
+        <!-- FONT STYLES-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Nova+Round&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <style>
+
+            /* DEFAULT LINES */
+
+            html {
+                padding:0.1rem;
+                background-color:hotpink;
+            }
+
+            body {
+                background-color:white;
+                border-radius:10px;
+            }
+
+
+            body * {
+                font-family:"Open Sans";
+                transition: all 0.2s ease-in-out;
+                padding:0.5rem;
+
+            }
+
+            h1, h2, h3 {
+                font-family:"Intel One Mono";
+            }
+
+            h2 {
+                padding:1rem;
+                text-align:center;
+                text-transform:uppercase;
+            }
+
+            h1 {
+                text-align:center;
+                color:hotpink;
+                text-transform:uppercase;
+            }
+
+            h1:hover {
+                background-color:green;
+                color:white;
+                transform:translateY(-0.2rem);
+            }
+
+            b {
+                letter-spacing:0.1rem;
+            }
+
+            section {
+                margin:1rem;
+                padding:0.5rem;
+            }
+
+            ul {
+                margin:1rem;
+            }
+
+            /* SPECIFIC ITEMS */
+
+                /* Bold Items */
+
+                b[class$="low"] {
+                    color:green;
+                }
+
+                b[class$="high"] {
+                    color:hotpink;
+                }
+                
+                b[class$="medium"] {
+                    color:rgb(5, 5, 163);
+                }
+
+                b[class~="term"]::before {
+                    content:"Υ ";
+                    font-size:0.8rem;
+                    vertical-align:super;
+                }
+
+                b[class~="place"]::before {
+                    content:"Φ ";
+                    font-size:0.8rem;
+                    vertical-align:super;
+                }
+
+                b[class~="people"]::before {
+                    content:"Ψ ";
+                    font-size:0.8rem;
+                    vertical-align:super;
+                }
+
+                b[class~="event"]::before {
+                    content:"Π ";
+                    font-size:0.8rem;
+                    vertical-align:super;
+                }
+
+
+        </style>
+    
+    </head>
+
+    <body>
+        <header>
+            <h1>Attribute Selector</h1>
+            <hr>
+        </header>
+        <main>
+            <section>
+                <h2>Attribute Selectors</h2>
+                <p>Allows you to target elements that have a certain attribute and an attribute value.</p>
+                <p>Some of the following paragraphs have multiple <b>bold</b> elements.</p>
+                <p>Some of them are considered important, while some have low importance. Depending upon the class value, they will have different formatting.</p>
+                <hr>
+                <h2>Altered Items (Control Video Game)</h2>
+                <p><b class="bold term high">Altered Items</b> are ordinary objects which have been acted upon by <b class="bold term low">paranatural forces</b> during <b class="bold event high">Altered World Events</b>, resulting in the development of unique and sometimes dangerous properties. They are distinguished from <b class="bold term high">Objects of Power</b> in that they lack an inherent connection to the <b class="bold people item">Board</b>, or the ability for <b class="bold people low">parautilitarians</b> to bind to them and wield their abilities. Altered Items were studied and contained by the <b class="bold people high">Federal Bureau of Control</b> in the <b class="bold place medium">Panopticon</b>, in the <b class="bold place medium">Sector</b>, as well as in other areas of the <b class="bold place high">Oldest House</b>. The term "Altered Item" is modern <b class="bold people high">FBC</b> terminology. Prior to the death of <b class="bold people high">Director Theodore Ash, Sr.</b> in 1964, the FBC employed the term <b class="bold term low">"Possessed Object"</b> instead, which reflected the organization's origins in occultism.</p>
+
+
+            </section>
+        </main>
+    </body>
+
+
+</html>
