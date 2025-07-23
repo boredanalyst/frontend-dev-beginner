@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>2D Transforms</title>
+
+        <!-- FONT STYLES-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Nova+Round&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <style>
+
+            /* DEFAULT LINES */
+
+            html {
+                padding:0.1rem;
+                background-color:hotpink;
+            }
+
+            body {
+                background-color:white;
+                border-radius:10px;
+            }
+
+
+            body * {
+                font-family:"Open Sans";
+                transition: all 0.2s ease-in-out;
+                padding:0.5rem;
+
+            }
+
+            h1, h2, h3 {
+                font-family:"Intel One Mono";
+            }
+
+            h2 {
+                padding:1rem;
+                text-align:center;
+                text-transform:uppercase;
+            }
+
+            h1 {
+                text-align:center;
+                color:hotpink;
+                text-transform:uppercase;
+            }
+
+            h1:hover {
+                background-color:green;
+                color:white;
+                transform:translateY(-0.2rem);
+            }
+
+            b {
+                letter-spacing:0.1rem;
+            }
+
+            b:hover {
+                background-color:green;
+                color:white;
+            }
+
+            section {
+                margin:1rem;
+                padding:0.5rem;
+            }
+
+            ul {
+                margin:1rem;
+            }
+
+            /* SPECIFIC ITEMS */
+
+                
+                section article {
+                    display:flex;
+                }
+
+                section article span {
+                    flex:1;
+                    background-color:hotpink;
+                    color:white;
+                    margin:10px;
+                    padding:10px;
+                    text-align:center;
+                
+                
+                }
+
+                /* 3D Rotations */
+
+                    section:nth-of-type(1) article span:nth-of-type(1):hover {
+                        background-color:rgb(99, 99, 255);
+                        transform:rotateZ(90deg);
+                    } 
+
+                
+
+
+
+
+        </style>
+    
+    </head>
+
+    <body>
+        <header>
+            <h1>2D Transforms</h1>
+            <hr>
+            <p><b>2D Transform</b> stylings allow users to transform elements along the x and y axes.</p>
+        </header>
+
+        <main>
+
+            <section id="3dTransform">
+                <h2>3D Transforms</h2>
+                <article>
+                    <span>option 1</span>
+                    <span>option 2</span>
+                </article>
+            </section>
+
+
+
+
+        </main>
+
+    </body>
+
+
+</html>
