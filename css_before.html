@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>::Before</title>
+
+        <!-- FONT STYLES-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Nova+Round&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <style>
+
+            /* DEFAULT LINES */
+
+            html {
+                padding:0.1rem;
+                background-color:hotpink;
+            }
+
+            body {
+                background-color:white;
+                border-radius:10px;
+            }
+
+
+            body * {
+                font-family:"Open Sans";
+                transition: all 0.2s ease-in-out;
+                padding:0.5rem;
+
+            }
+
+            h1, h2, h3 {
+                font-family:"Intel One Mono";
+            }
+
+            h2 {
+                padding:1rem;
+                text-align:center;
+                text-transform:uppercase;
+            }
+
+            h1 {
+                text-align:center;
+                color:hotpink;
+                text-transform:uppercase;
+            }
+
+            h1:hover {
+                background-color:green;
+                color:white;
+                transform:translateY(-0.2rem);
+            }
+
+            b {
+                letter-spacing:0.1rem;
+            }
+
+            b:hover {
+                background-color:green;
+                color:white;
+            }
+
+            section {
+                margin:1rem;
+                padding:0.5rem;
+            }
+
+            ul {
+                margin:1rem;
+            }
+
+            /* SPECIFIC ITEMS */
+
+                /* SHOPPING CART */
+
+                main section:first-of-type article p:hover::before {
+                    content: "Required! ";
+                    background-color:green;
+                    color:white;
+                    font-weight:bold;
+                    padding:0.5rem;
+                    margin-right:0.5rem;
+                }
+
+                /* TABLES */
+
+                table {
+                    border-collapse:collapse;
+                    width:100%;
+                }
+
+                table * {
+                    border:hotpink 0.1rem solid;
+                }
+
+                table tr:first-of-type {
+                    background-color:hotpink;
+                    color:white;
+                }
+
+                table tr td:first-child::before {
+                    content: "O ";
+                    font-weight:bold;
+                    color:hotpink;
+                }
+
+                table tr:last-child td:first-child::before {
+                    content: "P ";
+                    font-weight:bold;
+                    color:hotpink;
+                }
+
+
+        </style>
+    
+    </head>
+
+    <body>
+        <header>
+            <h1>::Before</h1>
+            <hr>
+        </header>
+        <main>
+            <p>The <b>::before</b> pseudoelements allow you to add elements before an element.</p>
+            <p>Yes. It does that.</p>
+            <p>Here are some use cases for this pseudoelement.</p>
+
+
+            <section>
+                <h2>Required or not REquired</h2>
+                <p>If you have a set of items, you can indicate whether an item is required or not using the <b>::before</b> pseudoelement.</p>
+                <h3>Shopping Cart</h3>
+                <article>
+                    <p>Apples</p>
+                    <p>Bananas</p>
+                    <p>Oranges</p>
+                    <p>Grapes</p>
+                </article>
+            </section>
+
+            <section>
+                <h2>Table Indicators</h2>
+                <p>You can also use <b>icons</b> as before elements!</p>
+                <table>
+                    <tr>
+                        <th>Category</th>
+                        <th>Items</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                        <td>Fruits</td>
+                        <td>Apples</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Fruits</td>
+                        <td>Oranges</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Canned Goods</td>
+                        <td>Tuna</td>
+                        <td>5</td>
+                    </tr>
+
+                </table>
+
+            </section>
+
+        </main>
+    </body>
+
+
+</html>
