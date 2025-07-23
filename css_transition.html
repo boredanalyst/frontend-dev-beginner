@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Transitions</title>
+
+        <!-- FONT STYLES-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Nova+Round&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <style>
+
+            /* DEFAULT LINES */
+
+            html {
+                padding:0.1rem;
+                background-color:hotpink;
+            }
+
+            body {
+                background-color:white;
+                border-radius:10px;
+            }
+
+
+            body * {
+                font-family:"Open Sans";
+                transition: all 0.2s ease-in-out;
+                padding:0.5rem;
+
+            }
+
+            h1, h2, h3 {
+                font-family:"Intel One Mono";
+            }
+
+            h2 {
+                padding:1rem;
+                text-align:center;
+                text-transform:uppercase;
+            }
+
+            h1 {
+                text-align:center;
+                color:hotpink;
+                text-transform:uppercase;
+            }
+
+            h1:hover {
+                background-color:green;
+                color:white;
+                transform:translateY(-0.2rem);
+            }
+
+            b {
+                letter-spacing:0.1rem;
+            }
+
+            b:hover {
+                background-color:green;
+                color:white;
+            }
+
+            section {
+                margin:1rem;
+                padding:0.5rem;
+            }
+
+            ul {
+                margin:1rem;
+            }
+
+            /* SPECIFIC ITEMS */
+
+                
+                section article {
+                    display:flex;
+                }
+
+                section article span {
+                    flex:1;
+                    background-color:hotpink;
+                    color:white;
+                    margin:10px;
+                    padding:10px;
+                    text-align:center;                
+                }
+
+                /* CHANGING COLORS */
+
+                    @keyframes toPink {
+                        from {background-color:hotpink;} to {background-color:pink;}
+                    }
+
+                    section:nth-of-type(1) article span:hover {
+                        animation-name:toPink;
+                        animation-duration:1s;
+                    }
+             
+
+                /* ROTATION SQUARES */
+
+                    section:nth-of-type(2) article {
+                        display:block;
+                    }
+
+                    section:nth-of-type(2) article span {
+                        position:relative;
+                    }
+
+                    @keyframes spinSquare {
+                        0% {background-color:hotpink;left:0px;}
+                        25% {background-color:rgb(218, 54, 136);left:10px}
+                        90% {background-color:rgb(218, 11, 114);left:10px}
+                        100% {background-color:rgb(218, 11, 114);left:0px}
+                    }
+
+                    section:nth-of-type(2) article span:hover {
+                        animation-name:spinSquare;
+                        animation-duration:1s;
+                        animation-iteration-count: infinite;
+                    }
+                
+
+
+
+
+        </style>
+    
+    </head>
+
+    <body>
+        <header>
+            <h1>Transitions</h1>
+            <hr>
+            <p><b>Transitions</b> allow users to hold a formatting state of an element in <b>keyframes</b></p>
+        </header>
+
+        <main>
+
+            <section>
+                <h2>Color Bounce</h2>
+                <article>
+                    <span>changing colors</span>
+                </article>
+            </section>
+
+            <section>
+                <h2>Moving Squares</h2>
+                <article>
+                    <span>Roller</span>
+                </article>
+            </section>
+
+        </main>
+
+    </body>
+
+
+</html>
