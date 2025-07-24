@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The Has() + Pseudoclasses
+        </title>
+
+        <!-- FONT STYLES-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Nova+Round&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <style>
+
+            /* DEFAULT LINES */
+
+            html {
+                padding:0.1rem;
+                background-color:hotpink;
+
+            }
+
+            body {
+                background-color:white;
+                border-radius:10px;
+            }
+
+
+            body * {
+                font-family:"Open Sans";
+                transition: all 0.2s ease-in-out;
+                padding:0.5rem;
+            }
+
+            h1, h2, h3 {
+                font-family:"Intel One Mono";
+            }
+
+            h2 {
+                padding:1rem;
+                text-align:center;
+                text-transform:uppercase;
+            }
+
+            h1 {
+                text-align:center;
+                color:hotpink;
+                text-transform:uppercase;
+            }
+
+            h1:hover {
+                background-color:green;
+                color:white;
+                transform:translateY(-0.2rem);
+            }
+
+            b {
+                letter-spacing:0.1rem;
+            }
+
+            b:hover {
+                background-color:green;
+                color:white;
+            }
+
+            section {
+                margin:1rem;
+                padding:0.5rem;
+            }
+
+            ul {
+                margin:1rem;
+            }
+
+            /* SPECIFIC ITEMS */
+
+                section section {
+                    display:flex;
+                    padding:1rem;
+                    background-color:rgb(219, 212, 212);
+                }
+
+                section section span {
+                    flex:1;
+                    text-align:center;
+                    padding:10px;
+                    padding-top:30px;
+                    padding-bottom:30px;
+                    margin:10px;
+                    font-weight:bold;
+                    border-radius:5px;
+                }
+
+                section section span:hover {
+                    box-shadow:10px 10px 10px rgb(194, 194, 255), 5px 5px 30px blueviolet;
+                    transform:translateY(-3px)
+                }
+
+                section section span:nth-of-type(even) {
+                    background-color:green;
+                    color:white;
+                }
+
+                section section span:nth-of-type(odd) {
+                    background-color:blue;
+                    color:white;
+                }
+
+                section section:has(span:hover) {
+                    transform:scale(1.1);
+                }
+
+                /* has + nth-of-type */
+
+                main section:nth-of-type(2) section {
+                    display:flex;
+                    overflow:hidden;
+                }
+
+                ul {
+                    list-style-type:none;
+                    background-color:rgb(195, 252, 195);
+                    padding:20px;
+                    border-radius:10px;
+                    flex:1;
+                }
+
+                ul li {
+                    font-size:12px;
+                }
+
+                ul:hover {
+                    box-shadow:5px 5px 20px rgb(204, 201, 201), 10px 10px 20px rgb(158, 157, 157);
+                    transform:translateY(-5px);
+                }
+
+                ul li:nth-of-type(1n+4) {
+                    font-weight:bold;
+                    color:white;
+                }
+
+                ul li:nth-of-type(1n+4)::before {
+                    content:"✗ "
+                }
+
+                ul:has(li:nth-of-type(4)) {
+                    background-color:rgb(88, 74, 74);
+                    color:white;
+                }
+        </style>
+    
+    </head>
+
+    <body>
+        <header>
+            <h1>The :has() selector</h1>
+            <hr>
+            <p>The <v>:has()</v> selector checks whether a parent contains another element inside it.</p>
+            <p>The element to check for can be specified in the has() function.</p>
+        </header>
+
+        <main>
+
+            <section>
+                <h2> :has() + :hover</h2>
+                <p>The :has() pseudoclass can also be used with anoter pseudoclass. For example, this section has a style that only takes effect if it has a span item that is hovered upon.</p>
+                <p>The following section will scale up whenever one of the options has a cursor hovering upon it. It will revert if the cursor moves out of the option.</p>
+                <section>
+                    <span>Option 1</span>
+                    <span>Option 2</span>
+                    <span>Option 3</span>
+                </section>
+            </section>
+
+            <section>
+                <h2>:has() + :nth-of-type()</h2>
+                <p>The :has() pseudoclass can be used with the nth-of-type pseudoclass to apply a style only to certain elements that contain a certain number of elements.</p>
+                <p>The following lists will be colored differently if they have greater than 3 items.</p>
+                <h3>Weekly Class Schedule</h3>
+                <section>
+                    
+                    <ul>
+                        <h3>Monday</h3>
+                        <li>Science 1</li>
+                        <li>Math 1</li>
+                        <li>Math 2</li>
+                    </ul>
+                    <ul>
+                        <h3>Tuesday</h3>
+                        <li>Science 1</li>
+                        <li>English 1</li>
+                        <li>PE 1</li>
+                        <li>PE 2</li>
+                    </ul>
+                    <ul>
+                        <h3>Wednesday</h3>
+                        <li>Science 1</li>
+                        <li>Math 1</li>
+                        <li>Math 2</li>
+                        <li>Statistics 1</li>
+                    </ul>
+                    <ul>
+                        <h3>Thursday</h3>
+                        <li>Science 1</li>
+                        <li>English 1</li>
+                        <li>PE 1</li>
+                        <li>PE 2</li>
+                        <li>Spanish 1</li>
+                    </ul>
+                    <ul>
+                        <h3>Friday</h3>
+                        <li>Science 1</li>
+                        <li>Statistics 1</li>
+                        <li>Spanish 1</li>
+                    </ul>
+                </section>
+            </section>
+        </main>
+
+    </body>
+
+
+</html>
