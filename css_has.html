@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The Has() Selector</title>
+
+        <!-- FONT STYLES-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Nova+Round&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <style>
+
+            /* DEFAULT LINES */
+
+            html {
+                padding:0.1rem;
+                background-color:hotpink;
+            }
+
+            body {
+                background-color:white;
+                border-radius:10px;
+            }
+
+
+            body * {
+                font-family:"Open Sans";
+                transition: all 0.2s ease-in-out;
+                padding:0.5rem;
+
+            }
+
+            h1, h2, h3 {
+                font-family:"Intel One Mono";
+            }
+
+            h2 {
+                padding:1rem;
+                text-align:center;
+                text-transform:uppercase;
+            }
+
+            h1 {
+                text-align:center;
+                color:hotpink;
+                text-transform:uppercase;
+            }
+
+            h1:hover {
+                background-color:green;
+                color:white;
+                transform:translateY(-0.2rem);
+            }
+
+            b {
+                letter-spacing:0.1rem;
+            }
+
+            b:hover {
+                background-color:green;
+                color:white;
+            }
+
+            section {
+                margin:1rem;
+                padding:0.5rem;
+            }
+
+            ul {
+                margin:1rem;
+            }
+
+            /* SPECIFIC ITEMS */
+
+                code {
+                    background-color:gray;
+                    color:white;
+                    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    letter-spacing:2px;
+                }
+
+                code::before {
+                    content:"<"
+                }
+
+                code::after {
+                    content:">"
+                }
+
+                section:has(h2) {
+                    background-color:pink
+                }
+
+                section:has(code[class*="pink"]) {
+                    background-color:deeppink;
+                    color:white;
+                }
+
+                section:nth-of-type(3) h3:has(+ p) {
+                    font-weight:bolder;
+                    color:deeppink;
+                }
+
+        </style>
+    
+    </head>
+
+    <body>
+        <header>
+            <h1>The :has() selector</h1>
+            <hr>
+            <p>The <v>:has()</v> selector checks whether a parent contains another element inside it.</p>
+            <p>The element to check for can be specified in the has() function.</p>
+        </header>
+
+        <main>
+
+            <section>
+                <h2>This is an H2</h2>
+                <p>This section is style based on the :has() function.</p>
+                <p>This style only affects <code>section</code> element that has an <code>h2</code> element.</p>
+                <p>Note that the has function can detect a child of <em>any</em> level, no matter how deep.</p>
+            </section>
+
+            <section>
+                <h3>This is an H3</h3>
+                <p>Because the heading is an <code class="tag-pink">h3</code>, the previous style doesn't affect this section.</p>
+                <p>Instead, the style here only takes effect because the code inside this section has a class of <code>tag-pink</code>.</p>
+            </section>
+
+            <section>
+                <h3>This is an H3</h3>
+                <p>This section's style is based on sibling.</p>
+                <p>The style checks whether an <code>h3</code> exists inside this section, and it has a sibling of <code>p</code></p>
+            </section>
+        </main>
+
+    </body>
+
+
+</html>
