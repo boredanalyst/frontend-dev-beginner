@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <style>
+            html * {
+                font-family:"Roboto";
+                transition:all 0.5s ease-in-out;
+            }
+
+            :is(h1,h2,h3) {
+                font-family:"Raleway";
+            }
+
+            /* header */ 
+
+            header {
+                padding:1rem;
+            }
+
+            header h1 {
+                text-align:center;
+            }
+
+                header hr {
+                    width:70%;
+                }
+
+            main {
+                padding:3rem;
+            }
+
+                main h2 {
+                    text-align:center;
+                }
+
+                main h2 + h2 {
+                    font-size:4rem;
+                    color:hotpink;
+                }
+
+            main p.response {
+                text-transform: uppercase;
+                font-weight:bold;
+                color:hotpink;
+                text-indent:2rem;
+            }
+
+            main p.response::before {
+                content:">> ";
+            }
+
+            p.response + hr {
+                text-align:left;
+                width:30%;
+            }
+
+        </style>
+
+        <script>
+
+            function changeColor() {
+                var para = document.getElementById("change-me");
+                para.style.backgroundColor = "hotpink";
+                para.style.color="white";
+                console.log("The paragraph's colors have been changed.");
+            }
+
+        </script>
+
+
+
+    </head>
+
+
+
+    <body>
+        <header>
+            <h1>Console Log</h1>
+            <hr>
+
+        </header>
+        <p id="change-me">
+            Look at me change my color!
+        </p>
+        <main>
+           <button onclick="changeColor()">
+                Change the color!
+           </button>
+        </main>
+    </body>
+</html>
