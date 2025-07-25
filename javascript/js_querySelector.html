@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <style>
+            html * {
+                font-family:"Roboto";
+                transition:all 0.5s ease-in-out;
+            }
+
+            :is(h1,h2,h3) {
+                font-family:"Raleway";
+            }
+
+            /* header */ 
+
+            header {
+                padding:1rem;
+            }
+
+            header h1 {
+                text-align:center;
+            }
+
+                header hr {
+                    width:70%;
+                }
+
+            main {
+                padding:3rem;
+            }
+
+                main h2 {
+                    text-align:center;
+                }
+
+                main h2 + h2 {
+                    font-size:4rem;
+                    color:hotpink;
+                }
+
+            main p.response {
+                text-transform: uppercase;
+                font-weight:bold;
+                color:hotpink;
+                text-indent:2rem;
+            }
+
+            main p.response::before {
+                content:">> ";
+            }
+
+            p.response + hr {
+                text-align:left;
+                width:30%;
+            }
+
+        </style>
+
+        <script>
+
+            function highlightMe(){
+                const important_item = document.querySelector("ul > li:first-of-type");
+                important_item.style.backgroundColor = "yellow";
+                important_item.style.textIndent = "1rem";
+                important_item.style.padding = "1rem";
+                important_item.style.fontWeight = "bold";
+            }
+        </script>
+
+
+
+    </head>
+
+
+
+    <body>
+        <header>
+            <h1>document.querySelector</h1>
+            <hr>
+
+        </header>
+        <main>
+           <button onclick="highlightMe()">
+                Change the color!
+           </button>
+           <ul>
+                <h3>Shopping Cart</h3>
+                <li class="shop_bought">Apple</li>
+                <li class="shop_bought">Orange</li>
+                <li>Grapes</li>
+                <li>Banana</li>
+                <li class="shop_bought">Fish</li>
+           </ul>
+        </main>
+    </body>
+</html>
