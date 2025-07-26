@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <style>
+            html * {
+                font-family:"Roboto";
+                transition:all 0.5s ease-in-out;
+            }
+
+            :is(h1,h2,h3) {
+                font-family:"Raleway";
+            }
+
+            /* header */ 
+
+            header {
+                padding:1rem;
+            }
+
+            header h1 {
+                text-align:center;
+            }
+
+                header hr {
+                    width:70%;
+                }
+
+            main {
+                padding:3rem;
+            }
+
+                main h2 {
+                    text-align:center;
+                }
+
+                main h2 + h2 {
+                    font-size:4rem;
+                    color:hotpink;
+                }
+
+            main p.response {
+                text-transform: uppercase;
+                font-weight:bold;
+                color:hotpink;
+                text-indent:2rem;
+            }
+
+            main p.response::before {
+                content:">> ";
+            }
+
+            p.response + hr {
+                text-align:left;
+                width:30%;
+            }
+
+            article p {
+                background-color: red;
+                padding:1rem;
+                border-radius:10px;
+                box-shadow:10px 10px 20px gray;
+                color:white;
+            }
+
+            article p:hover {
+                background-color:yellow;
+                color:black;
+            }
+
+            li.phd {
+                background-color:hotpink;
+                color:white;
+                padding:1rem;
+                width:50%;
+            }
+
+        </style>
+
+        <script>
+
+            function highlightPhD() {
+                const list_of_students = document.querySelectorAll("li");
+
+                for (let i = 0; i < list_of_students.length; i++) {
+                    const list_content = list_of_students[i].innerHTML;
+                    if (list_content.indexOf("PhD", 0) >= 1) {
+                        list_of_students[i].classList.add("phd");
+                    }
+                }
+
+                const para = document.createElement("p");
+                para.innerHTML = "All the individuals with PhDs have been identified.";
+                
+                const main_section = document.querySelector("main");
+                main_section.appendChild(para);
+
+            }
+
+        </script>
+
+
+
+    </head>
+
+
+
+    <body>
+        <header>
+            <h1>Strings</h1>
+            <hr>
+            <button onclick="highlightPhD()">
+                Highlight PhDs
+            </button>
+            <ul>
+                <h3>List of students</h3>
+                <li>Angela Monroe, PhD</li>
+                <li>Albert Cruz, MS</li>
+                <li>Dora Rodriguez, MS</li>
+                <li>Almira Fredrickson, MA</li>
+                <li>Morris Johnson, PhD</li>
+            </ul>
+            
+        </header>
+        <main>
+       
+        </main>
+    </body>
+</html>
