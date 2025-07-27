@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <style>
+            html * {
+                font-family:"Roboto";
+                transition:all 0.5s ease-in-out;
+            }
+
+            :is(h1,h2,h3) {
+                font-family:"Raleway";
+            }
+
+            /* header */ 
+
+            header {
+                padding:1rem;
+            }
+
+            header h1 {
+                text-align:center;
+            }
+
+                header hr {
+                    width:70%;
+                }
+
+            main {
+                padding:3rem;
+            }
+
+                main h2 {
+                    text-align:center;
+                }
+
+                main h2 + h2 {
+                    font-size:4rem;
+                    color:hotpink;
+                }
+
+            main p.response {
+                text-transform: uppercase;
+                font-weight:bold;
+                color:hotpink;
+                text-indent:2rem;
+            }
+
+            main p.response::before {
+                content:">> ";
+            }
+
+            p.response + hr {
+                text-align:left;
+                width:30%;
+            }
+
+            article p {
+                background-color: red;
+                padding:1rem;
+                border-radius:10px;
+                box-shadow:10px 10px 20px gray;
+                color:white;
+            }
+
+            article p:hover {
+                background-color:yellow;
+                color:black;
+            }
+
+            /* LIST ITEMS */
+
+            ul li {
+                list-style-type:none;
+                background-color:white;
+                border-radius:10px;
+                box-shadow:5px 5px 15px gray;
+                margin:1rem;
+                padding:1rem;
+            }
+
+            ul li:hover {
+                background-color:gray;
+                color:white;
+                cursor:pointer;
+            }
+
+            ul li.new-item::before {
+                content: "NEW ";
+                font-size:0.7rem;
+                font-weight:bold;
+                color:green;
+                vertical-align:super;
+            }
+
+        </style>
+
+        <script>
+
+            function addNewToDoList() {
+                const unordered_list = document.querySelector("ul");
+
+                const new_item = prompt("What is your to-do item? ");
+                const due_date = prompt("When is this item due? ");
+                
+                const new_list_item = document.createElement("li");
+                new_list_item.innerHTML = `${new_item} - Due Date: ${due_date}`;
+                new_list_item.classList.add("new-item")
+
+                unordered_list.appendChild(new_list_item);
+            }
+
+        </script>
+
+
+
+    </head>
+
+
+
+    <body>
+        <header>
+            <h1>Events</h1>
+            <hr>
+            <button onclick="addNewToDoList()">
+                Add a new item
+            </button>
+            <ul>
+                <h3>To do list</h3>
+                <li onclick="this.style.textDecorationLine = 'line-through'">Go to the flower shop today</li>
+                <li onclick="this.style.textDecorationLine = 'line-through'">Go to the dentist</li>
+                <li onclick="this.style.textDecorationLine = 'line-through'">Buy more shampoo</li>
+                <li onclick="this.style.textDecorationLine = 'line-through'">Pick up laundry</li>
+            </ul>
+
+        </header>
+        <main>
+       
+        </main>
+    </body>
+</html>
